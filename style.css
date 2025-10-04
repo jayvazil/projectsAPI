@@ -1,11 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background: #A9A9A9;
   text-align: center;
 }
 
 .form-container {
-  background: white;
+  background: #6495ED;
   padding: 20px;
   margin: 50px auto;
   width: 300px;
@@ -22,12 +22,12 @@ input, select, textarea, button {
 }
 
 button {
-  background: #007BFF;
-  color: white;
+  background: #A9A9A9
+  color: #FF69B4;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background: #0056b3;
+  background: #FF7F50;
 }>
