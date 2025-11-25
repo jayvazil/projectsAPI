@@ -1,7 +1,15 @@
 <?php
 session_start();
-include 'db.php';
+$host = "localhost";   // use 127.0.0.1 instead of localhost
+$user = "root";        // default XAMPP user
+$pass = "";            // default password is empty
+$db   = "expense_tracker";
 
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email    = $_POST['email'];
     $password = $_POST['password'];
@@ -13,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password'])) {
             $_SESSION['user_id'] = $row['id'];
-            header("Location: dashboard.php");
+            header("Location: dashboard.html");
         } else {
             echo "Invalid password!";
         }
