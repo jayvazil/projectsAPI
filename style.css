@@ -22,8 +22,8 @@ input, select, textarea, button {
 }
 
 button {
-  background: #2c0aeb;
-  color: #340ce7;
+  background: #168dbdff;
+  color: #fff;
   border: none;
   cursor: pointer;
 }
